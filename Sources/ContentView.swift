@@ -77,7 +77,28 @@ struct ContentView: View {
                     }
                 }
             }
-            .padding(.bottom, 24)
+            .padding(.bottom, 8)
+
+            VStack {
+                Spacer()
+                Button(action: {
+                    if let url = URL(string: "https://t.me/LuoXueModX") {
+                        UIApplication.shared.open(url)
+                    }
+                }) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "paperplane.fill")
+                        Text("المطور: قناة تلكرام")
+                    }
+                    .font(.system(size: 14))
+                    .foregroundColor(.white.opacity(0.8))
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 16)
+                    .background(Color.white.opacity(0.15))
+                    .cornerRadius(20)
+                }
+                .padding(.bottom, 10)
+            }
         }
     }
 
